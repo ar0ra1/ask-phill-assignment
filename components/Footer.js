@@ -4,6 +4,8 @@ export const Footer = () => {
       <a
         className="text-orange-700 underline"
         href="https://github.com/ar0ra1/ask-phill-assignment"
+        rel="nofollow noreferrer"
+        target="_blank"
       >
         Github
       </a>
