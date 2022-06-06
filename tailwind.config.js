@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       colors: {
         siteBg: "#F8F5EF",
+        secondaryBg: "#F0EBDE",
       },
     },
   },
