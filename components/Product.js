@@ -3,14 +3,19 @@ import Image from "next/image";
 
 export const Product = ({ data }) => {
   return (
-    <div className={"grid grid-cols-3 mb-5 gap-y-4"}>
+    <div
+      className={
+        "grid md:grid-cols-3 mb-5 md:gap-y-4 gap-y-5 grid-cols-1 grid-rows-2 self-center"
+      }
+    >
       {data.length > 0 ? (
         data.map((e) => (
           <div
+            onClick={() => alert("Product Page - Out of scope :P")}
             key={e.node.name}
-            className="flex flex-col bg-white rounded-sm hover:ease-in-out w-96 hover:shadow-lg hover:delay-100 hover:transition-all"
+            className="flex flex-col bg-white rounded-sm cursor-pointer hover:ease-in-out w-80 md:w-96 hover:shadow-lg hover:delay-100 hover:transition-all"
           >
-            <div className="relative w-full h-96">
+            <div className="relative h-80 md:w-full md:h-96 w-80">
               <Image
                 objectFit="cover"
                 src={`https:${e.node.thumbnailImage.file.url}`}

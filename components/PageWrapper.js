@@ -154,7 +154,7 @@ export const PageWrapper = ({ data }) => {
   }, [page, edges, filterProducts, applyFilters, updatePrice]);
 
   return (
-    <div className="flex flex-row gap-7">
+    <div className="flex flex-col justify-evenly md:flex-row gap-7">
       <FiltersComponent
         handleCategoryFilter={categoryFilterCallBack}
         handleColorFilter={colorFilterCallBack}

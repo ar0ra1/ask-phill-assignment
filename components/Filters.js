@@ -84,7 +84,7 @@ const Filters = ({
         </div>
         <div className="flex flex-col gap-5 mt-10">
           <h5 className="font-semibold text-gray-500">Categories</h5>
-          <div className="flex flex-wrap gap-5">
+          <div className="grid grid-cols-2 gap-5">
             {allCategories.sort() &&
               allCategories.map((category) => (
                 <p
