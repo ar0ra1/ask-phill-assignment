@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useCallback } from "react";
+import React, { useState, useMemo, useCallback } from "react";
 import {
   isValidColor,
   formatCategories,
@@ -26,7 +26,7 @@ export const PageWrapper = ({ data }) => {
   const edges = data.data.allContentfulProductPage.edges;
 
   // init
-  useEffect(() => {
+  useMemo(() => {
     [
       ...edges.map((o) => {
         if (o.node.colorFamily && isValidColor(o.node.colorFamily[0].name)) {

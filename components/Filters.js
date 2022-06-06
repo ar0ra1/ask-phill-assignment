@@ -1,4 +1,4 @@
-import React, { useState, memo, useEffect } from "react";
+import React, { useState, memo, useMemo } from "react";
 
 const Filters = ({
   allColors,
@@ -16,7 +16,7 @@ const Filters = ({
   const [selectedCategory, setSelectedCategory] = useState(new Set());
   const [selectedColor, setSelectedColor] = useState(new Set());
 
-  useEffect(() => {
+  useMemo(() => {
     // only update when the user changes -> FIXES UI bug
     if (!userInducedChanged) {
       setUserMax(maxPriceRange);
